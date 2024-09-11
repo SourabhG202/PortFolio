@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="imagee/SOURABH GHODKI (3).jpg" class="logo" width="auto" height="auto">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>JAVA WEB DEVELOPER</p>
+                <h1>Hi, I'm <span>Sourabh</span></h1>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="imagee/ka.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I'm a passionate Java Web Developer with a strong enthusiasm for building scalable and efficient web applications. With a solid foundation in Java, I'm always looking to expand my skills and stay up-to-date with the latest trends and technologies in the web development world.
+
+                        Feel free to connect with me and let's explore the world of Java web development together!</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Core Java</span><br>Proficiency in object-oriented programming (OOP) principles. Familiarity with Java collections, exception handling, and multithreading.</li>
+                                <li><span>Web Technologies</span><br>HTML, CSS, and JavaScript. Understanding of front-end frameworks/libraries like Angular, React.js.</li>
+                                <li><span>Database Management</span><br>SQL and database design. Experience with relational databases like MySQL, PostgreSQL, or Oracle.</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2020 - 2023</span><br>Bachelors Of Computer Applications From D.A.V.V. University Indore</li>
+                                <li><span>2023 - 2025</span><br>Masters Of Computer Applications From J.N.U New Delhi</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="imagee/todo.jpg">
+                    <div class="layer">
+                        <h3>Todo List App</h3>
+                        <p>A to-do list is a tool for managing tasks by listing items that need completion, often organized by priority or due date. Users can add, edit, remove, and mark tasks as done. It helps individuals and teams stay organized and track progress.</p>
+                        <a href="#"><i class="fas fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="imagee/2222222.jpg">
+                    <div class="layer">
+                        <h3>Online Dairy Management System</h3>
+                        <p>An online dairy management system streamlines the operations of dairy farms by digitizing records of milk production, inventory, and sales. It enables farmers to track animal health, breeding, and feeding schedules efficiently. The system enhances productivity and decision-making through real-time data access and analytics.</p>
+                        <a href="#"><i class="fas fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="imagee/Book.jpg">
+                    <div class="layer">
+                        <h3>Book My Show</h3>
+                        <p>Book My Show is an online ticket booking system that allows users to browse and reserve seats for movies, events, and shows. It provides real-time information on availability, showtimes, and venues. The platform offers a seamless booking experience with options for payment and seat selection.</p>
+                        <a href="#"><i class="fas fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See More</a>
+        </div>
+    </div>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fas fa-paper-plane"></i> sourabhghodki579@gmail.com</p>
+                    <p><i class="fas fa-square-phone"></i> 7974836491</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/sourabh-ghodki-879593213/"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://instagram.com/sourabh_._g/"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <a href="imagee/Sourabh Ghodki CV new.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea type="Message" rows="6" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Copyright @100rabh.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
